@@ -32,10 +32,10 @@ class UserController extends BaseController {
             if ($attempt) {
                 return Redirect::to('family')->with('success_message', '登录成功！');
             }else{
-                return Redirect::to('login')->with('warning_message', '手机号或密码错误');
+                return Redirect::to('login')->withInput()->with('warning_message', '手机号或密码错误');
             }
         }else{
-            return Redirect::to('login')->with('warning_message', $validator->messages()->first());
+            return Redirect::to('login')->withInput()->with('warning_message', $validator->messages()->first());
         }
     }
 

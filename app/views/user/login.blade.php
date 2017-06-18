@@ -21,7 +21,7 @@
     <br>
     {{ Form::open(array('url' => 'doLogin', 'method'=>'post', 'class'=>'am-form')) }}
       {{ Form::label('mobile', '手机:') }}
-      {{ Form::text('mobile')  }}
+      {{ Form::text('mobile', Input::get('mobile'))  }}
       <br>
       {{ Form::label('密码:') }}
       {{ Form::password('password') }}
