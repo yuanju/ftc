@@ -39,9 +39,10 @@ Route::get('tools', 'FamilyController@uiTools');
 Route::get('familyPicture', 'FamilyPictureController@index');
 
 //家庭传记
-Route::get('familyBiography', 'FamilyBiographyController@index');
-Route::get('familyBiography/edit', 'FamilyBiographyController@edit');
-Route::post('familyBiography/doEdit', 'FamilyBiographyController@doEdit');
+//Route::get('familyBiography', 'FamilyBiographyController@index');
+//Route::get('familyBiography/edit', 'FamilyBiographyController@edit');
+//Route::post('familyBiography/doEdit', 'FamilyBiographyController@doEdit');
+Route::controller('familyBiography', 'FamilyBiographyController');
 
 //家族新闻
 Route::get('familyNews', 'FamilyNewsController@index');

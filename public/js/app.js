@@ -1,6 +1,5 @@
 (function ($) {
     'use strict';
-
     $(function () {
         var $fullText = $('.admin-fullText');
         $('#admin-fullscreen').on('click', function () {
@@ -22,5 +21,10 @@
       
         $.mCustomScrollbar.defaults.theme = "light-1"; 
         $("#admin-offcanvas").mCustomScrollbar();
+        if($('.am-alert').size() > 0){
+            setTimeout(function(){
+                $('.am-alert').alert('close');
+            }, 3000);
+        }
     });
 })(jQuery);

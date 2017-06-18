@@ -1,8 +1,6 @@
 @extends('adminLayout')
 
-
 @section('content')
-<div class="admin-content">
     <div class="admin-content-body">
       <div class="am-cf am-padding am-padding-bottom-0">
         <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">家族传记</strong> / <small>Biography</small></div>
@@ -18,7 +16,7 @@
                   <a type="button" class="am-btn am-btn-default" href="{{url('familyBiography/edit')}}"><span class="am-icon-plus"></span> 新增</a>
                   {{--<button type="button" class="am-btn am-btn-default"><span class="am-icon-save"></span> 保存</button>--}}
                   {{--<button type="button" class="am-btn am-btn-default"><span class="am-icon-archive"></span> 审核</button>--}}
-                  <button type="button" class="am-btn am-btn-default"><span class="am-icon-trash-o"></span> 删除</button>
+                  {{--<button type="button" class="am-btn am-btn-default"><span class="am-icon-trash-o"></span> 删除</button>--}}
                 </div>
               </div>
             </div>
@@ -35,14 +33,14 @@
                 {{--</select>--}}
               {{--</div>--}}
             {{--</div>--}}
-            <div class="am-u-sm-12 am-u-md-3">
-              <div class="am-input-group am-input-group-sm">
-                <input type="text" class="am-form-field">
-              <span class="am-input-group-btn">
-                <button class="am-btn am-btn-default" type="button">搜索</button>
-              </span>
-              </div>
-            </div>
+            {{--<div class="am-u-sm-12 am-u-md-3">--}}
+              {{--<div class="am-input-group am-input-group-sm">--}}
+                {{--<input type="text" class="am-form-field">--}}
+              {{--<span class="am-input-group-btn">--}}
+                {{--<button class="am-btn am-btn-default" type="button">搜索</button>--}}
+              {{--</span>--}}
+              {{--</div>--}}
+            {{--</div>--}}
             </form>
       </div>
 
@@ -73,7 +71,7 @@
                   <div class="am-btn-toolbar">
                     <div class="am-btn-group am-btn-group-xs">
                       <a href="{{url('familyBiography/edit?id='.$biography->id)}}" class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</a>
-                      <a class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</a>
+                      <a href="{{url('familyBiography/drop?id='.$biography->id)}}" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</a>
                     </div>
                   </div>
                 </td>
@@ -97,6 +95,4 @@
       <hr>
       <p class="am-padding-left">© 2017 powered by family tree</p>
     </footer>
-
-  </div>
 @stop

@@ -15,6 +15,9 @@
   <link rel="stylesheet" href="{{asset('css')}}/amazeui.css"/>
   <link rel="stylesheet" href="{{asset('css')}}/admin.css">
   <link rel="stylesheet" href="{{asset('jquery.mCustomScrollbar')}}/jquery.mCustomScrollbar.css">
+  <style>
+
+  </style>
   @yield('css')
 </head>
 <body>
@@ -103,7 +106,38 @@
   <!-- sidebar end -->
 
   <!-- content start -->
+  <div class="admin-content">
+    <div class="admin-content-header">
+      @if( Session::get('info_message') )
+        <div class="am-alert" data-am-alert>
+          <button type="button" class="am-close">&times;</button>
+          <p>{{ Session::get('info_message') }}</p>
+        </div>
+      @endif
+
+      @if( Session::get('success_message') )
+        <div class="am-alert am-alert-success" data-am-alert>
+          <button type="button" class="am-close">&times;</button>
+          <p>{{ Session::get('success_message') }}</p>
+        </div>
+      @endif
+
+      @if( Session::get('warning_message') )
+        <div class="am-alert am-alert-warning" data-am-alert>
+          <button type="button" class="am-close">&times;</button>
+          <p>{{ Session::get('warning_message') }}</p>
+        </div>
+      @endif
+
+      @if( Session::get('danger_message') )
+        <div class="am-alert am-alert-danger" data-am-alert>
+          <button type="button" class="am-close">&times;</button>
+          <p>{{ Session::get('danger_message') }}</p>
+        </div>
+      @endif
+    </div>
   @yield('content')
+  </div>
   <!-- content end -->
 
 </div>
@@ -126,8 +160,8 @@
 <!--<![endif]-->
 <script src="{{asset('js')}}/amazeui.min.js"></script>
 <script src="{{asset('jquery.mCustomScrollbar')}}/jquery.mCustomScrollbar.concat.min.js"></script>
-
 <script src="{{asset('js')}}/app.js"></script>
+
 <!-- 其他js start -->
 @yield('js')
 <!-- 其他js end -->
