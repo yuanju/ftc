@@ -27,5 +27,11 @@ class FamilyController extends BaseController {
 //        $user = Family::firstOrCreate(array('name' => 'John'));
 //        $user = User::create(array('name' => 'John'));
 //        var_dump($user);
+        echo 'ok';
+        return Redirect::to('familyBiography');
+    }
+    
+    public function uiTools(){
+        return View::make('family.tool');
     }
 }

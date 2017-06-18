@@ -3400,26 +3400,26 @@ fieldset[disabled] .am-checkbox-inline {
 /* ==========================================================================
    Component: Pagination
  ============================================================================ */
-.am-pagination {
+.pagination {
   padding-left: 0;
   margin: 1.5rem 0;
   list-style: none;
   color: #999999;
   text-align: left;
 }
-.am-pagination:before,
-.am-pagination:after {
+.pagination:before,
+.pagination:after {
   content: " ";
   display: table;
 }
-.am-pagination:after {
+.pagination:after {
   clear: both;
 }
-.am-pagination > li {
+.pagination > li {
   display: inline-block;
 }
-.am-pagination > li > a,
-.am-pagination > li > span {
+.pagination > li > a,
+.pagination > li > span {
   position: relative;
   display: block;
   padding: 0.5em 1em;
@@ -3431,56 +3431,56 @@ fieldset[disabled] .am-checkbox-inline {
   margin-bottom: 5px;
   margin-right: 5px;
 }
-.am-pagination > li:last-child > a,
-.am-pagination > li:last-child > span {
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
   margin-right: 0;
 }
-.am-pagination > li > a:hover,
-.am-pagination > li > span:hover,
-.am-pagination > li > a:focus,
-.am-pagination > li > span:focus {
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
   background-color: #eeeeee;
 }
-.am-pagination > .am-active > a,
-.am-pagination > .am-active > span,
-.am-pagination > .am-active > a:hover,
-.am-pagination > .am-active > span:hover,
-.am-pagination > .am-active > a:focus,
-.am-pagination > .am-active > span:focus {
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
   z-index: 2;
   color: #fff;
   background-color: #0e90d2;
   border-color: #0e90d2;
   cursor: default;
 }
-.am-pagination > .am-disabled > span,
-.am-pagination > .am-disabled > span:hover,
-.am-pagination > .am-disabled > span:focus,
-.am-pagination > .am-disabled > a,
-.am-pagination > .am-disabled > a:hover,
-.am-pagination > .am-disabled > a:focus {
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
   color: #999999;
   background-color: #fff;
   border-color: #ddd;
   cursor: not-allowed;
   pointer-events: none;
 }
-.am-pagination .am-pagination-prev {
+.pagination .pagination-prev {
   float: left;
 }
-.am-pagination .am-pagination-prev a {
+.pagination .pagination-prev a {
   border-radius: 0;
 }
-.am-pagination .am-pagination-next {
+.pagination .pagination-next {
   float: right;
 }
-.am-pagination .am-pagination-next a {
+.pagination .pagination-next a {
   border-radius: 0;
 }
-.am-pagination-centered {
+.pagination-centered {
   text-align: center;
 }
-.am-pagination-right {
+.pagination-right {
   text-align: right;
 }
 /* ==========================================================================
@@ -12975,7 +12975,7 @@ tbody.am-collapse.am-in {
 .am-navbar-default .am-navbar-actions a {
   border-bottom: 1px solid #0b6fa2;
 }
-.am-pagination {
+.pagination {
   position: relative;
 }
 /**
