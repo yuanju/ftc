@@ -46,7 +46,7 @@ Route::controller('familyNews', 'FamilyNewsController');
 
 
 //家族通知
-Route::get('familyNotice', 'FamilyNoticeController@index');
+Route::controller('familyNotice', 'FamilyNoticeController');
 
 //系统通知
 Route::get('sysNotice', 'SysNoticeController@index');
