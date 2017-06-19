@@ -1,6 +1,6 @@
 <?php
 
-class SysNoticeController extends BaseController {
+class SysHelperController extends BaseController {
 
     function __construct (){
         if(!Auth::check()){
@@ -9,7 +9,8 @@ class SysNoticeController extends BaseController {
     }
     
     public function index() {
-        return View::make('sysNotice.index');
+        $helper_list = SysHelper::paginate(5);
+        return View::make('sysHelper.index')->with('helper_list',$helper_list);
     }
     
 }

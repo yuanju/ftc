@@ -70,7 +70,7 @@
         <li @if(URL::current() == url('familyBiography')) class="active" @endif><a href="{{ url('familyBiography') }}"><span class="am-icon-pencil-square-o"></span> 家族传记</a></li>
         <li @if(URL::current() == url('familyNews')) class="active" @endif><a href="{{ url('familyNews') }}"><span class="am-icon-newspaper-o"></span> 家族新闻</a></li>
         <li @if(URL::current() == url('familyNotice')) class="active" @endif><a href="{{ url('familyNotice') }}"><span class="am-icon-bullhorn"></span> 家族公告<span class="am-badge am-badge-secondary am-margin-right am-fr">24</span></a></li>
-        <li @if(URL::current() == url('sysNotice')) class="active" @endif><a href="{{ url('sysNotice') }}"><span class="am-icon-puzzle-piece"></span> 帮助</a></li>
+        <li @if(URL::current() == url('sysHelper')) class="active" @endif><a href="{{ url('sysHelper') }}"><span class="am-icon-puzzle-piece"></span> 帮助</a></li>
         <li><a href="{{ url('logout') }}"><span class="am-icon-sign-out"></span> 注销</a></li>
       </ul>
 

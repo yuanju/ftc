@@ -49,6 +49,6 @@ Route::controller('familyNews', 'FamilyNewsController');
 Route::controller('familyNotice', 'FamilyNoticeController');
 
 //系统通知
-Route::get('sysNotice', 'SysNoticeController@index');
+Route::get('sysHelper', 'SysHelperController@index');
 
 
