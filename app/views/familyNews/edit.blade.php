@@ -11,8 +11,8 @@
     <div class="admin-content">
         <div class="admin-content-body">
             <div class="am-cf am-padding am-padding-bottom-0">
-                <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">@if($id)编辑@else添加@endif传记</strong> /
-                    <small>Biography</small>
+                <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">@if($id)编辑@else添加@endif新闻</strong> /
+                    <small>News</small>
                 </div>
             </div>
 
@@ -20,7 +20,7 @@
 
             <div class="am-g">
                 <div class="am-u-sm-12 am-u-md-6 am-u-md-offset-3">
-                    <form class="am-form" action="{{url('familyBiography/do-edit')}}" method="post">
+                    <form class="am-form" action="{{url('familyNews/do-edit')}}" method="post">
                         <fieldset>
                             <div class="am-form-group">
                                 <input type="hidden" name="id" value="@if($article){{$article->id}}@endif"/>

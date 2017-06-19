@@ -61,9 +61,9 @@ class FamilyBiographyController extends BaseController {
         $family_biography_modal->last_editor = Auth::user()->id;
         $rs = $family_biography_modal->save();
         if($rs){
-            return Redirect::to('familyBiography');
+            return Redirect::to('familyBiography')->with('success_message', ($id ? '修改' : '添加').'成功！');
         }else{
-            return Redirect::to('familyBiography/edit');
+            return Redirect::to('familyBiography/edit')->with('warning_message', '操作失败！');
         }
     }
 

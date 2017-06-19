@@ -13,7 +13,7 @@
             <div class="am-u-sm-12 am-u-md-6">
               <div class="am-btn-toolbar">
                 <div class="am-btn-group am-btn-group-xs">
-                  <a type="button" class="am-btn am-btn-default" href="{{url('familyBiography/edit')}}"><span class="am-icon-plus"></span> 新增</a>
+                  <a type="button" class="am-btn am-btn-primary" href="{{url('familyBiography/edit')}}"><span class="am-icon-plus"></span> 新增</a>
                   {{--<button type="button" class="am-btn am-btn-default"><span class="am-icon-save"></span> 保存</button>--}}
                   {{--<button type="button" class="am-btn am-btn-default"><span class="am-icon-archive"></span> 审核</button>--}}
                   {{--<button type="button" class="am-btn am-btn-default"><span class="am-icon-trash-o"></span> 删除</button>--}}
@@ -59,7 +59,7 @@
               </tr>
               </thead>
               <tbody>
-              @foreach($biography_list as $biography)
+              @forelse($biography_list as $biography)
               <tr>
                 <td><input type="checkbox"></td>
                 <td>{{$biography->id}}</td>
@@ -76,7 +76,11 @@
                   </div>
                 </td>
               </tr>
-                @endforeach
+            @empty
+              <tr>
+                  <td colspan="7">您目前还没有家庭传记！<a type="button" class="am-btn am-btn-xs am-btn-primary" href="{{url('familyBiography/edit')}}"><span class="am-icon-plus"></span> 新增</a> </td>
+              </tr>
+              @endforelse
               </tbody>
             </table>
             <div class="am-cf">
